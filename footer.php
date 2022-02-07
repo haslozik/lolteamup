@@ -3,10 +3,10 @@
         rlteamup
     </h1>
     <div class="footerMenu">
-        <a class="navLoginBtn">
+        <a class="navLoginBtn" href="signin.php">
             Sign In
         </a>
-        <a class="navSignupBtn">
+        <a class="navSignupBtn" href="signup.php">
             Sign Up
         </a>
     </div>

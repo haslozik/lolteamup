@@ -13,7 +13,7 @@ nav {
   align-items: center;
 }
 
-nav .navBtnsContainer button {
+nav .navBtnsContainer a {
   border: none;
   padding: 8px 25px;
   font-size: 14px;
@@ -21,9 +21,10 @@ nav .navBtnsContainer button {
   color: #fff;
   cursor: pointer;
   transition: 0.2s;
+  text-decoration: none;
 }
 
-nav .navBtnsContainer button:hover {
+nav .navBtnsContainer a:hover {
   filter: brightness(1.15);
 }
 
@@ -133,6 +134,8 @@ footer .footerMenu .navLoginBtn {
 
 footer .footerMenu a {
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
 }
 
 footer .footerMenu a:hover {

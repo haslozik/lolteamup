@@ -21,12 +21,12 @@
             rlteamup
         </h1>
         <div class="navBtnsContainer">
-            <button class="navLoginBtn">
+            <a class="navLoginBtn" href="signin.php">
                 Sign In
-            </button>
-            <button class="navSignupBtn">
+            </a>
+            <a class="navSignupBtn" href="signup.php">
                 Sign Up
-            </button>
+            </a>
         </div>
     </nav>
     <section class="titleSection">
