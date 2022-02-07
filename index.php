@@ -68,8 +68,7 @@
             </h4>
         </div>
     </section>
-    
-    <?php include("footer.php") ?>
+    <?php include "footer.php"; ?>
 
 </body>
 </html>
