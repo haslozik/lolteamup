@@ -22,7 +22,7 @@
         </h1>
         <div class="navBtnsContainer">
             <button class="navLoginBtn">
-                Log In
+                Sign In
             </button>
             <button class="navSignupBtn">
                 Sign Up

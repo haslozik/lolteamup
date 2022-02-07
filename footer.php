@@ -4,7 +4,7 @@
     </h1>
     <div class="footerMenu">
         <a class="navLoginBtn">
-            Log In
+            Sign In
         </a>
         <a class="navSignupBtn">
             Sign Up
