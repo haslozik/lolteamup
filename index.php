@@ -45,20 +45,31 @@
             <h3 class="announcementName">
                 Nickname1
             </h3>
+            <h4 class="announcementRank">
+                Diamond 2
+            </h4>
         </div>
         <div class="announcementElement">
             <div class="announcementImage"></div>
             <h3 class="announcementName">
                 Nickname2
             </h3>
+            <h4 class="announcementRank">
+                Grand Champion 1
+            </h4>
         </div>
         <div class="announcementElement">
             <div class="announcementImage"></div>
             <h3 class="announcementName">
                 Nickname3
             </h3>
+            <h4 class="announcementRank">
+                Silver 3
+            </h4>
         </div>
     </section>
+    
+    <?php include("footer.php") ?>
 
 </body>
 </html>

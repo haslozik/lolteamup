@@ -50,7 +50,7 @@ nav .navBtnsContainer .navSignupBtn {
   width: 100%;
   height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/img/rlMainBg.jpg");
+    url("./img/rlMainBg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,7 +99,12 @@ nav .navBtnsContainer .navSignupBtn {
 
 .announcementsSection .announcementElement .announcementName {
   font-weight: 600;
-  padding: 25px;
+  padding: 25px 0 10px 25px;
+}
+
+.announcementsSection .announcementElement .announcementRank {
+  font-weight: 600;
+  padding: 0 0 25px 25px;
 }
 
 .announcementsSection .announcementElement .announcementImage {
@@ -109,4 +114,27 @@ nav .navBtnsContainer .navSignupBtn {
   background: url("./img/annBg.jpg");
   background-position: center;
   background-size: cover;
+}
+
+footer {
+  background: #333;
+  margin-top: 50px;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .footerMenu .navLoginBtn {
+  margin-right: 20px;
+}
+
+footer .footerMenu a {
+  cursor: pointer;
+}
+
+footer .footerMenu a:hover {
+  color: #bbb;
 }
