@@ -105,7 +105,50 @@ if(isset($_POST['email'])) {
 </head>
 <body>
 
-
+    <form method="POST">
+        <!---->
+            <input type="text" placeholder="Login" name="login" style="margin-top: 0;">
+                <?php
+                    if(isset($_SESSION['errorLogin'])) {
+                        echo '<div id="error">'.$_SESSION['errorLogin'].'</div>';
+                        unset($_SESSION['errorLogin']);
+                    }
+                ?>
+            <input type="password" placeholder="Password" name="password">
+                <?php
+                    if(isset($_SESSION['errorPassword'])) {
+                        echo '<div id="error">'.$_SESSION['errorPassword'].'</div>';
+                        unset($_SESSION['errorPassword']);
+                    }
+                ?>
+        <!---->
+            <input type="password" placeholder="Confirm Password" name="passwordConfirm"><br>
+            <input type="text" placeholder="Email" name="email">
+                <?php
+                    if(isset($_SESSION['errorEmail'])) {
+                        echo '<div id="error">'.$_SESSION['errorEmail'].'</div>';
+                        unset($_SESSION['errorEmail']);
+                    }
+                ?>
+        <!---->
+        <div id="inputContainer" style="padding: 20px 0;">
+            <label>
+                <input type="checkbox" name="checkBox">
+                I accept the <a href="#">Terms of Use</a> 
+                    &
+                <a href="privacy_copy.php">Privacy Policy</a>
+            </label>
+                <?php
+                    if(isset($_SESSION['errorCheckbox'])) {
+                        echo '<div id="error">'.$_SESSION['errorCheckbox'].'</div>';
+                        unset($_SESSION['errorCheckbox']);
+                    }
+                ?>
+        </div>
+        <input type="submit" name="save-changes" id="saveBtn" value="SIGN UP">
+    </form>
     
+    <?php include "footer.php"; ?>
+
 </body>
 </html>
