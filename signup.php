@@ -43,6 +43,8 @@ if(isset($_POST['email'])) {
         $_SESSION['errorEmail'] = "Please enter a valid email";
     }
 
+    $lolName = $_POST['lolNick'];
+
     require_once 'connection.php';
     mysqli_report(MYSQLI_REPORT_STRICT);
 
@@ -95,7 +97,7 @@ if(isset($_POST['email'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>rlteamup - sign up</title>
+    <title>lolteamup - sign up</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -114,6 +116,7 @@ if(isset($_POST['email'])) {
                         unset($_SESSION['errorLogin']);
                     }
                 ?>
+        <!---->
             <input type="password" placeholder="Password" name="password">
                 <?php
                     if(isset($_SESSION['errorPassword'])) {
@@ -122,7 +125,8 @@ if(isset($_POST['email'])) {
                     }
                 ?>
         <!---->
-            <input type="password" placeholder="Confirm Password" name="passwordConfirm"><br>
+            <input type="password" placeholder="Confirm Password" name="passwordConfirm">
+        <!---->
             <input type="text" placeholder="Email" name="email">
                 <?php
                     if(isset($_SESSION['errorEmail'])) {
@@ -131,21 +135,11 @@ if(isset($_POST['email'])) {
                     }
                 ?>
         <!---->
-        <div id="inputContainer" style="padding: 20px 0;">
-            <label>
-                <input type="checkbox" name="checkBox">
-                I accept the <a href="#">Terms of Use</a> 
-                    &
-                <a href="privacy_copy.php">Privacy Policy</a>
-            </label>
-                <?php
-                    if(isset($_SESSION['errorCheckbox'])) {
-                        echo '<div id="error">'.$_SESSION['errorCheckbox'].'</div>';
-                        unset($_SESSION['errorCheckbox']);
-                    }
-                ?>
-        </div>
-        <input type="submit" name="save-changes" id="saveBtn" value="SIGN UP">
+            <input type="text" placeholder="Steam Link" name="steamName">
+        <!---->
+            <input type="text" placeholder="Epic Link" name="epicName">
+        <!---->
+        <input type="submit" id="saveBtn" value="SIGN UP">
     </form>
     
     <?php include "footer.php"; ?>

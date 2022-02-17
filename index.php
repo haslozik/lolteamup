@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>rlteamup</title>
+    <title>lolteamup</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,7 +18,7 @@
     
     <nav>
         <h1 class="logo">
-            rlteamup
+            lolteamup
         </h1>
         <div class="navBtnsContainer">
             <a class="navLoginBtn" href="signin.php">
@@ -31,7 +31,7 @@
     </nav>
     <section class="titleSection">
         <h1 class="titleText">
-            Team up with other Rocket League players!
+            Team up with other League of Legends players!
         </h1>
     </section>
     <section class="finderSection">
@@ -46,7 +46,7 @@
                 Nickname1
             </h3>
             <h4 class="announcementRank">
-                Diamond 2
+                Diamond II
             </h4>
         </div>
         <div class="announcementElement">
@@ -55,7 +55,7 @@
                 Nickname2
             </h3>
             <h4 class="announcementRank">
-                Grand Champion 1
+                Gold IV
             </h4>
         </div>
         <div class="announcementElement">
@@ -64,7 +64,7 @@
                 Nickname3
             </h3>
             <h4 class="announcementRank">
-                Silver 3
+                Silver III
             </h4>
         </div>
     </section>

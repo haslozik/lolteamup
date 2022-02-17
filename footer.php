@@ -1,6 +1,6 @@
 <footer>
     <h1 class="logo">
-        rlteamup
+        lolteamup
     </h1>
     <div class="footerMenu">
         <a class="navLoginBtn" href="signin.php">
