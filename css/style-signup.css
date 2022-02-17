@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body .signUpForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpForm input {
+  padding: 12px 15px;
+  margin: 20px;
+  width: 400px;
+}

@@ -29,12 +29,6 @@ if(isset($_POST['email'])) {
 
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-    //checkbox validation
-    if(!isset($_POST['checkBox'])) {
-        $successfulValidation = false;
-        $_SESSION['errorCheckbox'] = "You must accept the rules";
-    }
-
     //email validation
     $email = $_POST['email'];
     $emailFV = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -43,7 +37,7 @@ if(isset($_POST['email'])) {
         $_SESSION['errorEmail'] = "Please enter a valid email";
     }
 
-    $lolName = $_POST['lolNick'];
+    $lolName = $_POST['lolName'];
 
     require_once 'connection.php';
     mysqli_report(MYSQLI_REPORT_STRICT);
@@ -72,7 +66,7 @@ if(isset($_POST['email'])) {
 
             //successful validation
             if($successfulValidation == true) {
-                if($conn->query("INSERT INTO users VALUES(NULL, '$login', '$passwordHash', '$email','$steamLink','$epicName')")){
+                if($conn->query("INSERT INTO users VALUES(NULL, '$login', '$passwordHash', '$email','$lolName')")){
                     $_SESSION['successfulSignedup'] = true;
                     header('Location: signedup.php');
                 } else {
@@ -100,14 +94,26 @@ if(isset($_POST['email'])) {
     <title>lolteamup - sign up</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-signup.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a821291b86.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+    <nav>
+        <h1 class="logo">
+            lolteamup
+        </h1>
+        <div class="navBtnsContainer">
+            <a class="navLoginBtn" href="signin.php">
+                Sign In
+            </a>
+        </div>
+    </nav>
 
-    <form method="POST">
+    <form method="POST" class="signUpForm">
+        <div class="signUpForm">
         <!---->
             <input type="text" placeholder="Login" name="login" style="margin-top: 0;">
                 <?php
@@ -135,11 +141,10 @@ if(isset($_POST['email'])) {
                     }
                 ?>
         <!---->
-            <input type="text" placeholder="Steam Link" name="steamName">
+            <input type="text" placeholder="League of Legends Nickname" name="lolName">
         <!---->
-            <input type="text" placeholder="Epic Link" name="epicName">
-        <!---->
-        <input type="submit" id="saveBtn" value="SIGN UP">
+            <input type="submit" id="saveBtn" value="SIGN UP">
+        </div>
     </form>
     
     <?php include "footer.php"; ?>
