@@ -15,4 +15,29 @@ body .signUpForm {
   padding: 12px 15px;
   margin: 20px;
   width: 400px;
+  border: none;
+  background: #f7f7f7;
+}
+
+.signUpForm input[type="submit"] {
+  background: rgb(11, 198, 227) !important;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.signUpForm input[type="submit"]:hover {
+  background: rgb(12, 211, 241) !important;
+}
+
+@media (max-width: 480px) {
+  form {
+    width: 100%;
+  }
+
+  .signUpForm input {
+    padding: 12px 15px;
+    margin: 10px auto;
+    width: 90%;
+  }
 }

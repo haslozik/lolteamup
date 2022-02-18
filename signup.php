@@ -103,7 +103,7 @@ if(isset($_POST['email'])) {
 <body>
     <nav>
         <h1 class="logo">
-            lolteamup
+            <a href="index.php" class="logoLink">lolteamup</a>
         </h1>
         <div class="navBtnsContainer">
             <a class="navLoginBtn" href="signin.php">
