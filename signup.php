@@ -37,7 +37,12 @@ if(isset($_POST['email'])) {
         $_SESSION['errorEmail'] = "Please enter a valid email";
     }
 
+    //LoL nickname validation
     $lolName = $_POST['lolName'];
+    if((strlen($lolName)<3) || (strlen($lolName)>20)) {
+        $successfulValidation = false;
+        $_SESSION['errorLolname'] = "You must enter a nickname";
+    }
 
     require_once 'connection.php';
     mysqli_report(MYSQLI_REPORT_STRICT);
@@ -114,7 +119,7 @@ if(isset($_POST['email'])) {
 
     <form method="POST" class="signUpForm">
         <div class="signUpForm">
-        <!---->
+            <h2 class="formTitle">Create an account</h2>
             <input type="text" placeholder="Login" name="login" style="margin-top: 0;">
                 <?php
                     if(isset($_SESSION['errorLogin'])) {
@@ -122,7 +127,6 @@ if(isset($_POST['email'])) {
                         unset($_SESSION['errorLogin']);
                     }
                 ?>
-        <!---->
             <input type="password" placeholder="Password" name="password">
                 <?php
                     if(isset($_SESSION['errorPassword'])) {
@@ -130,9 +134,7 @@ if(isset($_POST['email'])) {
                         unset($_SESSION['errorPassword']);
                     }
                 ?>
-        <!---->
             <input type="password" placeholder="Confirm Password" name="passwordConfirm">
-        <!---->
             <input type="text" placeholder="Email" name="email">
                 <?php
                     if(isset($_SESSION['errorEmail'])) {
@@ -140,9 +142,13 @@ if(isset($_POST['email'])) {
                         unset($_SESSION['errorEmail']);
                     }
                 ?>
-        <!---->
             <input type="text" placeholder="League of Legends Nickname" name="lolName">
-        <!---->
+            <?php
+                    if(isset($_SESSION['errorLolname'])) {
+                        echo '<div id="error">'.$_SESSION['errorLolname'].'</div>';
+                        unset($_SESSION['errorLolname']);
+                    }
+                ?>
             <input type="submit" id="saveBtn" value="SIGN UP">
         </div>
     </form>

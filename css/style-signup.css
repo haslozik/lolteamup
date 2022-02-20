@@ -11,6 +11,10 @@ body .signUpForm {
   flex-direction: column;
 }
 
+.formTitle {
+  margin: 15px 20px;
+}
+
 .signUpForm input {
   padding: 12px 15px;
   margin: 20px;
