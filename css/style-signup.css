@@ -11,8 +11,13 @@ body .signUpForm {
   flex-direction: column;
 }
 
-.formTitle {
+.formTitle,
+.signUpForm .infoLogin {
   margin: 15px 20px;
+}
+
+.signUpForm .infoLogin span a {
+  color: rgb(11, 198, 227);
 }
 
 .signUpForm input {

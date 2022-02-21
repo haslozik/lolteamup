@@ -150,6 +150,7 @@ if(isset($_POST['email'])) {
                     }
                 ?>
             <input type="submit" id="saveBtn" value="SIGN UP">
+            <p class="infoLogin">If you have an account <span><a href="signin.php">sign in now!</a></span></p>
         </div>
     </form>
     
