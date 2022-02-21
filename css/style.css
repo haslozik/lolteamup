@@ -142,7 +142,8 @@ footer .footerMenu .navLoginBtn {
   margin-right: 20px;
 }
 
-footer .footerMenu a {
+footer .footerMenu a,
+footer .logo a {
   cursor: pointer;
   color: #fff;
   text-decoration: none;
