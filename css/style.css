@@ -152,3 +152,29 @@ footer .logo a {
 footer .footerMenu a:hover {
   color: #bbb;
 }
+
+@media (max-width: 1280px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .titleSection {
+    height: 300px;
+  }
+
+  .titleSection .titleText {
+    padding: 15px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 790px) {
+  .titleSection {
+    height: 275px;
+  }
+
+  .titleSection .titleText {
+    padding: 15px;
+    font-size: 23px;
+  }
+}

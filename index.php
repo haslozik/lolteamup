@@ -18,7 +18,7 @@
     
     <nav>
         <h1 class="logo">
-            lolteamup
+            <a href="index.php" class="logoLink">lolteamup</a>
         </h1>
         <div class="navBtnsContainer">
             <a class="navLoginBtn" href="signin.php">
@@ -36,7 +36,7 @@
     </section>
     <section class="finderSection">
         <h1 class="finderText">Below you can find players announcements</h1>
-        <h5 class="finderInfoText">If you want to add an announcement, you must be logged in!</h5>
+        <h5 class="finderInfoText">If you want to add an announcement you must be logged in!</h5>
         <br><hr>
     </section>
     <section class="announcementsSection">
