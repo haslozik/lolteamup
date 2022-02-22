@@ -12,6 +12,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a821291b86.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
@@ -28,7 +30,20 @@
                 Sign Up
             </a>
         </div>
+        <i class="fas fa-bars"></i>
     </nav>
+    <div class="menuPhoneContainer">
+        <i class="fas fa-times"></i>
+            <a class="navLoginBtn" href="signin.php">
+                Sign In
+            </a>
+            <a class="navSignupBtn" href="signup.php">
+                Sign Up
+            </a>
+            <a href="mailto:mail@mail.com">
+                Contact
+            </a>
+    </div>
     <section class="titleSection">
         <h1 class="titleText">
             Team up with other League of Legends players!
