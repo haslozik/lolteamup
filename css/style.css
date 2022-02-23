@@ -157,7 +157,8 @@ footer {
   height: 100px;
 }
 
-footer .footerMenu .navLoginBtn {
+footer .footerMenu .navLoginBtn,
+footer .footerMenu .navSignupBtn {
   margin-right: 20px;
 }
 
@@ -170,6 +171,10 @@ footer .logo a {
 
 footer .footerMenu a:hover {
   color: #bbb;
+}
+
+footer .logo a sup {
+  font-size: 15px;
 }
 
 /* rwd */
@@ -242,5 +247,15 @@ footer .footerMenu a:hover {
 
   .menuPhoneContainer a:hover {
     color: #bbb;
+  }
+}
+
+@media (max-width: 570px) {
+  footer .footerMenu {
+    display: none;
+  }
+
+  footer .logo a {
+    font-size: 20px;
   }
 }

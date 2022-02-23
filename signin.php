@@ -29,7 +29,7 @@
             <a href="index.php" class="logoLink">lolteamup</a>
         </h1>
         <div class="navBtnsContainer">
-        <a class="navSignupBtn" href="signup.php">
+            <a class="navSignupBtn" href="signup.php">
                 Sign Up
             </a>
         </div>
