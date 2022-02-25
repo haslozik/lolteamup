@@ -24,6 +24,33 @@
 
 </head>
 <body>
-    
+
+    <nav>
+        <h1 class="logo">
+            <a href="index.php" class="logoLink">lolteamup</a>
+        </h1>
+        <div class="navBtnsContainer">
+            <a class="navLoginBtn" href="signin.php">
+                Sign In
+            </a>
+            <a class="navSignupBtn" href="signup.php">
+                Sign Up
+            </a>
+        </div>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div class="menuPhoneContainer">
+        <i class="fas fa-times"></i>
+            <a class="navLoginBtn" href="signin.php">
+                Sign In
+            </a>
+            <a class="navSignupBtn" href="signup.php">
+                Sign Up
+            </a>
+            <a href="mailto:mail@mail.com">
+                Contact
+            </a>
+    </div>
+    <?php include "footer.php"; ?>
 </body>
 </html>
