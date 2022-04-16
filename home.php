@@ -51,6 +51,12 @@
                 Sign Out
             </a>
     </div>
+    
+    <section class="titleSection">
+        <h1 class="titleText">
+            Team up with other League of Legends players!
+        </h1>
+    </section>
 
     <footer>
         <h1 class="logo">
