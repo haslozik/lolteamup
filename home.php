@@ -27,7 +27,7 @@
 
     <nav>
         <h1 class="logo">
-            <a href="index.php" class="logoLink">lolteamup</a>
+            <a href="home.php" class="logoLink">lolteamup</a>
         </h1>
         <div class="navBtnsContainer">
             <a class="navLoginBtn" href="addAnnouncement.php">

@@ -1,6 +1,6 @@
 <footer>
     <h1 class="logo">
-        <a href="index.php"><sup>&copy;</sup>lolteamup</a>
+        <a href="home.php"><sup>&copy;</sup>lolteamup</a>
     </h1>
     <div class="footerMenu">
         <a class="navLoginBtn" href="signin.php">
