@@ -20,7 +20,7 @@ body .signUpForm {
   color: rgb(11, 198, 227);
 }
 
-.signUpForm input, .signUpForm select {
+.signUpForm input, .signUpForm select, .signUpForm .submit {
   padding: 12px 15px;
   margin: 20px;
   width: 400px;
@@ -32,14 +32,14 @@ body .signUpForm {
   color: #000;
 }
 
-.signUpForm input[type="submit"] {
+.signUpForm .submit {
   background: rgb(11, 198, 227) !important;
   cursor: pointer;
   color: #fff;
   transition: 0.2s;
 }
 
-.signUpForm input[type="submit"]:hover {
+.signUpForm .submit:hover {
   background: rgb(12, 211, 241) !important;
 }
 

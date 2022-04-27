@@ -4,6 +4,7 @@
     if(!isset($_SESSION['signedIn'])) {
         header('Location: index.php');
     }
+
     require_once 'connection.php';
     mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_STRICT);
 
@@ -36,7 +37,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>lolteamup - sign up</title>
+    <title>lolteamup - add an announcement</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-sign-pages.css">
@@ -57,11 +58,11 @@
         </div>
     </nav>
 
-    <form method="POST" action="addAnnouncement.php">
+    <form action="addAnnouncement.php" method="POST">
         <div class="signUpForm">
         <h2 class="formTitle">Add an announcement</h2>
-            <input type="text" placeholder="League of Legends Nickname" name="nickname" required><br>
-            <select name="lane">
+            <input type="text" placeholder="League of Legends Nickname" name="nickname" required>
+            <select type="text" name="lane">
                 <option value="" selected disabled hidden>Choose your lane</option>
                 <option value="Top">Top</option>
                 <option value="Jungle">Jungle</option>
@@ -69,8 +70,8 @@
                 <option value="ADC">ADC</option>
                 <option value="Support">Support</option>
             </select>    
-            <br>
-            <select name="rank">
+
+            <select type="text" name="rank">
                 <option value="" selected disabled hidden>Choose your rank</option>
                 <option value="Iron IV">Iron IV</option>
                 <option value="Iron III">Iron III</option>
@@ -101,8 +102,7 @@
                 <option value="Grandmaster">Grandmaster</option>
                 <option value="Challenger">Challenger</option>
             </select>    
-            <br>
-            <input type="submit" value="SUBMIT">
+            <button type="submit" name="submit" class="submit">Submit</button>
         </div>
     </form>
 
