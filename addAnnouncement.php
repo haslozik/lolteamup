@@ -62,13 +62,14 @@
         <div class="signUpForm">
         <h2 class="formTitle">Add an announcement</h2>
             <input type="text" placeholder="League of Legends Nickname" name="nickname" required>
+
             <select type="text" name="lane">
                 <option value="" selected disabled hidden>Choose your lane</option>
-                <option value="Top">Top</option>
-                <option value="Jungle">Jungle</option>
-                <option value="Middle">Middle</option>
-                <option value="ADC">ADC</option>
-                <option value="Support">Support</option>
+                <option value="topIcon.png">Top</option>
+                <option value="jungleIcon.png">Jungle</option>
+                <option value="midIcon.png">Middle</option>
+                <option value="bottomIcon.png">ADC</option>
+                <option value="supportIcon.png">Support</option>
             </select>    
 
             <select type="text" name="rank">

@@ -4,6 +4,7 @@
     if(!isset($_SESSION['signedIn'])) {
         header('Location: index.php');
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,60 +65,34 @@
     </section>
 
     <section class="announcementsSection">
-        <div class="announcementElement">
-            <div class="announcementImage"></div>
-            <h3 class="announcementName">
-                Nickname1
-            </h3>
-            <h4 class="announcementRank">
-                Diamond II
-            </h4>
-        </div>
-        <div class="announcementElement">
-            <div class="announcementImage"></div>
-            <h3 class="announcementName">
-                Nickname2
-            </h3>
-            <h4 class="announcementRank">
-                Gold IV
-            </h4>
-        </div>
-        <div class="announcementElement">
-            <div class="announcementImage"></div>
-            <h3 class="announcementName">
-                Nickname3
-            </h3>
-            <h4 class="announcementRank">
-                Silver III
-            </h4>
-        </div>
-        <div class="announcementElement">
-            <div class="announcementImage"></div>
-            <h3 class="announcementName">
-                Nickname1
-            </h3>
-            <h4 class="announcementRank">
-                Diamond II
-            </h4>
-        </div>
-        <div class="announcementElement">
-            <div class="announcementImage"></div>
-            <h3 class="announcementName">
-                Nickname2
-            </h3>
-            <h4 class="announcementRank">
-                Gold IV
-            </h4>
-        </div>
-        <div class="announcementElement">
-            <div class="announcementImage"></div>
-            <h3 class="announcementName">
-                Nickname3
-            </h3>
-            <h4 class="announcementRank">
-                Silver III
-            </h4>
-        </div>
+        <?php
+
+            $conn = mysqli_connect('localhost','root','','lolteamup');
+            $sql = "SELECT * FROM announcement ORDER BY RAND()";
+            $result = mysqli_query($conn,$sql);
+            $queryResults = mysqli_num_rows($result);
+
+            if($queryResults > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+        ?>
+
+            <div class="announcementElement">
+                <div class="announcementImage">
+                    <?php echo '<img src="img/'.$row["lane"].'">'; ?>
+                </div>
+                <h3 class="announcementName">
+                    <?php echo $row["nickname"] ?>
+                </h3>
+                <h4 class="announcementRank">
+                    <?php echo $row["rank"] ?>
+                </h4>
+            </div>
+            
+        <?php
+                }
+            }
+        ?>
+
     </section>
 
     <footer>
