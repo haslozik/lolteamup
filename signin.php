@@ -45,7 +45,7 @@
             ?>
             <input type="text" placeholder="Login" name="login"><br>
             <input type="password" placeholder="Password" name="password"><br>
-            <input type="submit" value="SIGN IN">
+            <input type="submit" value="SIGN IN" id="saveBtn">
             <p class="infoLogin">Not a member? <span><a href="signup.php">Sign up now!</a></span></p>
         </div>
     </form>

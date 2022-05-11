@@ -20,7 +20,9 @@ body .signUpForm {
   color: rgb(11, 198, 227);
 }
 
-.signUpForm input, .signUpForm select, .signUpForm .submit {
+.signUpForm input,
+.signUpForm select,
+.signUpForm #saveBtn {
   padding: 12px 15px;
   margin: 20px;
   width: 400px;
@@ -32,14 +34,14 @@ body .signUpForm {
   color: #000;
 }
 
-.signUpForm .submit {
+.signUpForm #saveBtn {
   background: rgb(11, 198, 227) !important;
   cursor: pointer;
   color: #fff;
   transition: 0.2s;
 }
 
-.signUpForm .submit:hover {
+.signUpForm #saveBtn:hover {
   background: rgb(12, 211, 241) !important;
 }
 
@@ -48,7 +50,8 @@ body .signUpForm {
     width: 100%;
   }
 
-  .signUpForm input, .signUpForm select {
+  .signUpForm input,
+  .signUpForm select {
     padding: 12px 15px;
     margin: 10px auto;
     width: 90%;

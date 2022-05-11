@@ -102,7 +102,7 @@
                 <option value="Grandmaster">Grandmaster</option>
                 <option value="Challenger">Challenger</option>
             </select>    
-            <button type="submit" name="submit" class="submit">Submit</button>
+            <button type="submit" name="submit" id="saveBtn">Submit</button>
         </div>
     </form>
 

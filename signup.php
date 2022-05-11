@@ -37,13 +37,6 @@ if(isset($_POST['email'])) {
         $_SESSION['errorEmail'] = "Please enter a valid email";
     }
 
-    //LoL nickname validation
-    $lolName = $_POST['lolName'];
-    if((strlen($lolName)<3) || (strlen($lolName)>20)) {
-        $successfulValidation = false;
-        $_SESSION['errorLolname'] = "You must enter a nickname";
-    }
-
     require_once 'connection.php';
     mysqli_report(MYSQLI_REPORT_STRICT);
 
@@ -71,7 +64,7 @@ if(isset($_POST['email'])) {
 
             //successful validation
             if($successfulValidation == true) {
-                if($conn->query("INSERT INTO users VALUES(NULL, '$login', '$passwordHash', '$email','$lolName')")){
+                if($conn->query("INSERT INTO users VALUES(NULL, '$login', '$passwordHash', '$email')")){
                     $_SESSION['successfulSignedup'] = true;
                     header('Location: signedup.php');
                 } else {
@@ -140,13 +133,6 @@ if(isset($_POST['email'])) {
                     if(isset($_SESSION['errorEmail'])) {
                         echo '<div id="error">'.$_SESSION['errorEmail'].'</div>';
                         unset($_SESSION['errorEmail']);
-                    }
-                ?>
-            <input type="text" placeholder="League of Legends Nickname" name="lolName">
-            <?php
-                    if(isset($_SESSION['errorLolname'])) {
-                        echo '<div id="error">'.$_SESSION['errorLolname'].'</div>';
-                        unset($_SESSION['errorLolname']);
                     }
                 ?>
             <input type="submit" id="saveBtn" value="SIGN UP">
