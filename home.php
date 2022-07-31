@@ -61,6 +61,7 @@
 
     <section class="finderSection">
         <h1 class="finderText">Below you can find players announcements</h1>
+        <h5 class="finderInfoText">The announcements on the home page are random</h5>
         <br><hr>
     </section>
 

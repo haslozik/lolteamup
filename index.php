@@ -51,7 +51,7 @@
     </section>
     <section class="finderSection">
         <h1 class="finderText">Below you can find players announcements</h1>
-        <h5 class="finderInfoText">If you want to add an announcement you must be logged in!</h5>
+        <h5 class="finderInfoText">The announcements on the home page are random</h5>
         <br><hr>
     </section>
     <section class="announcementsSection">

@@ -36,24 +36,25 @@ if(isset($_POST['email'])) {
         $successfulValidation = false;
         $_SESSION['errorEmail'] = "Please enter a valid email";
     }
-
-    require_once 'connection.php';
-    mysqli_report(MYSQLI_REPORT_STRICT);
+    
+        require_once 'connection.php';
+        mysqli_report(MYSQLI_REPORT_STRICT);
 
     try {
 
-        $conn = new mysqli($host,$db_user,$db_password,$db_name);
+        $connection = new mysqli($host,$db_user,$db_password,$db_name);
 
-        if($conn->connect_errno!=0) {
+
+        if($connection->connect_errno!=0) {
 
             throw new Exception(mysqli_connect_errno());
 
         } else {
 
             //email exist?
-            $result = $conn->query("SELECT userID FROM users WHERE email='$email'");
+            $result = $connection->query("SELECT userID FROM users WHERE email='$email'");
             if(!$result) {
-                throw new Exception($conn->error);
+                throw new Exception($connection->error);
             }
 
             $hm_email = $result->num_rows;
@@ -64,19 +65,19 @@ if(isset($_POST['email'])) {
 
             //successful validation
             if($successfulValidation == true) {
-                if($conn->query("INSERT INTO users VALUES(NULL, '$login', '$passwordHash', '$email')")){
+                if($connection->query("INSERT INTO users VALUES(NULL, '$login', '$passwordHash', '$email', 0)")){
                     $_SESSION['successfulSignedup'] = true;
                     header('Location: signedup.php');
                 } else {
-                    throw new Exception($conn->error);
+                    throw new Exception($connection->error);
                 }
             }
 
-            $conn->close();
+            $connection->close();
         }
 
     } catch(Exception $e) {
-        echo '<span style="color: red"> Connection with server failed</span>';
+        echo '<span style="color: red">Connection with server failed</span>';
     }
 }
 ?>
