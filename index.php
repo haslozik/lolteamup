@@ -66,17 +66,19 @@
                 while($row = mysqli_fetch_assoc($result)) {
         ?>
 
-            <div class="announcementElement">
-                <div class="announcementImage">
-                    <?php echo '<img src="img/'.$row["lane"].'">'; ?>
+            <a href='https://www.op.gg/summoners/eune/<?php echo $row["nickname"] ?>' target='_blank'>
+                <div class="announcementElement">
+                    <div class="announcementImage">
+                        <?php echo '<img src="img/'.$row["lane"].'">'; ?>
+                    </div>
+                    <h3 class="announcementName">
+                        <?php echo $row["nickname"] ?>
+                    </h3>
+                    <h4 class="announcementRank">
+                        <?php echo $row["rank"] ?>
+                    </h4>
                 </div>
-                <h3 class="announcementName">
-                    <?php echo $row["nickname"] ?>
-                </h3>
-                <h4 class="announcementRank">
-                    <?php echo $row["rank"] ?>
-                </h4>
-            </div>
+            </a>
             
         <?php
                 }

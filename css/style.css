@@ -105,7 +105,7 @@ nav .fa-bars {
   border: 1px solid rgb(35, 96, 250);
 }
 
-/* ann section */
+/* announcements section */
 .announcementsSection {
   width: 60%;
   margin: 0 auto;
@@ -113,6 +113,11 @@ nav .fa-bars {
   grid-template-columns: repeat(4, 1fr);
   gap: 40px 40px;
   margin: 50px auto 50px auto;
+}
+
+.announcementsSection a {
+  text-decoration: none;
+  color: #000;
 }
 
 .announcementsSection .announcementElement {

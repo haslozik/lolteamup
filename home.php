@@ -76,7 +76,7 @@
             if($queryResults > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
         ?>
-            <a href='https://www.op.gg/summoners/eune/<?php echo $row["nickname"] ?>'>
+            <a href='https://www.op.gg/summoners/eune/<?php echo $row["nickname"] ?>' target='_blank'>
                 <div class="announcementElement">
                     <div class="announcementImage">
                         <?php echo '<img src="img/'.$row["lane"].'">'; ?>
